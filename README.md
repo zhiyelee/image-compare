@@ -25,3 +25,6 @@ result/compare-jpg.html
 
 - Check canvas jpg with webp:
 result/compare-webp.html
+
+You may need zoom in to see the difference, sometimes you need refresh it on browser if you can not see images.
+this is not an official test, I can do more test cases or make a full report if necessary.
