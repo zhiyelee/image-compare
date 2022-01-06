@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Compare</title>
+  <link rel="stylesheet" href="" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../assets/jquery.event.move.js" type="text/javascript"></script>
+  <script src="../assets/jquery.twentytwenty.js" type="text/javascript"></script>
+  <!-- https://github.com/zurb/twentytwenty -->
+  <link rel="stylesheet" href="../assets/twentytwenty.css" type="text/css" media="screen" />
+  <style>
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Control are resized from original images in JPG form by mac preview(Zhiye used this to compare before), Others are resized by pillow (JPG), with different quality</p>
+  
+  <input type="checkbox" id="control_75-trigger" class="control-group trigger" name="control_75">
+  <label for="control_75-trigger"> control vs 75 jpg</label><br>
+  
+  <input type="checkbox" id="control_100-trigger" class="control-group trigger" name="control_100">
+  <label for="control_100-trigger"> control vs 95 jpg</label><br>
+  
+  <input type="checkbox" id="75_100-trigger" class="variant-group trigger" name="75_100">
+  <label for="75_100-trigger"> 75 jpg vs 95 jpg</label><br>
+  
+  <div class="container twentytwenty-container control_75 control-group">
+    <img src="../pillow_images/mac_posters/576fbbdc-c89a-4797-ae09-1ef9049a01bb.jpg" />
+    <img src="../pillow_images/75-jpg/576fbbdc-c89a-4797-ae09-1ef9049a01bb.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_100 control-group">
+    <img src="../pillow_images/mac_posters/576fbbdc-c89a-4797-ae09-1ef9049a01bb.jpg" />
+    <img src="../pillow_images/95-jpg/576fbbdc-c89a-4797-ae09-1ef9049a01bb.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container 75_100 variant-group">
+    <img src="../pillow_images/75-jpg/576fbbdc-c89a-4797-ae09-1ef9049a01bb.jpg" />
+    <img src="../pillow_images/95-jpg/576fbbdc-c89a-4797-ae09-1ef9049a01bb.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_75 control-group">
+    <img src="../pillow_images/mac_posters/4afd31cc-3d0b-4535-a6ed-26e7a567a73e.jpg" />
+    <img src="../pillow_images/75-jpg/4afd31cc-3d0b-4535-a6ed-26e7a567a73e.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_100 control-group">
+    <img src="../pillow_images/mac_posters/4afd31cc-3d0b-4535-a6ed-26e7a567a73e.jpg" />
+    <img src="../pillow_images/95-jpg/4afd31cc-3d0b-4535-a6ed-26e7a567a73e.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container 75_100 variant-group">
+    <img src="../pillow_images/75-jpg/4afd31cc-3d0b-4535-a6ed-26e7a567a73e.jpg" />
+    <img src="../pillow_images/95-jpg/4afd31cc-3d0b-4535-a6ed-26e7a567a73e.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_75 control-group">
+    <img src="../pillow_images/mac_posters/0c70faa3-bf63-4b0e-8ef2-87cb4f1e0275.jpg" />
+    <img src="../pillow_images/75-jpg/0c70faa3-bf63-4b0e-8ef2-87cb4f1e0275.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_100 control-group">
+    <img src="../pillow_images/mac_posters/0c70faa3-bf63-4b0e-8ef2-87cb4f1e0275.jpg" />
+    <img src="../pillow_images/95-jpg/0c70faa3-bf63-4b0e-8ef2-87cb4f1e0275.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container 75_100 variant-group">
+    <img src="../pillow_images/75-jpg/0c70faa3-bf63-4b0e-8ef2-87cb4f1e0275.jpg" />
+    <img src="../pillow_images/95-jpg/0c70faa3-bf63-4b0e-8ef2-87cb4f1e0275.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_75 control-group">
+    <img src="../pillow_images/mac_posters/ddd4871f-322b-4cc2-b446-7e72937ceca0.jpg" />
+    <img src="../pillow_images/75-jpg/ddd4871f-322b-4cc2-b446-7e72937ceca0.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_100 control-group">
+    <img src="../pillow_images/mac_posters/ddd4871f-322b-4cc2-b446-7e72937ceca0.jpg" />
+    <img src="../pillow_images/95-jpg/ddd4871f-322b-4cc2-b446-7e72937ceca0.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container 75_100 variant-group">
+    <img src="../pillow_images/75-jpg/ddd4871f-322b-4cc2-b446-7e72937ceca0.jpg" />
+    <img src="../pillow_images/100-jpg/ddd4871f-322b-4cc2-b446-7e72937ceca0.jpg" />
+  </div>
+
+  <div class="container twentytwenty-container control_75 control-group">
+    <img src="../pillow_images/mac_posters/f7be1bde-00e8-4518-9637-bcb0c00049a3.jpg" />
+    <img src="../pillow_images/75-jpg/f7be1bde-00e8-4518-9637-bcb0c00049a3.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_100 control-group">
+    <img src="../pillow_images/mac_posters/f7be1bde-00e8-4518-9637-bcb0c00049a3.jpg" />
+    <img src="../pillow_images/95-jpg/f7be1bde-00e8-4518-9637-bcb0c00049a3.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container 75_100 variant-group">
+    <img src="../pillow_images/75-jpg/f7be1bde-00e8-4518-9637-bcb0c00049a3.jpg" />
+    <img src="../pillow_images/100-jpg/f7be1bde-00e8-4518-9637-bcb0c00049a3.jpg" />
+  </div>
+
+  <div class="container twentytwenty-container control_75 control-group">
+    <img src="../pillow_images/mac_posters/373949da-f5e1-46cc-a9e7-f16cee2dd355.jpg" />
+    <img src="../pillow_images/75-jpg/373949da-f5e1-46cc-a9e7-f16cee2dd355.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_100 control-group">
+    <img src="../pillow_images/mac_posters/373949da-f5e1-46cc-a9e7-f16cee2dd355.jpg" />
+    <img src="../pillow_images/95-jpg/373949da-f5e1-46cc-a9e7-f16cee2dd355.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container 75_100 variant-group">
+    <img src="../pillow_images/75-jpg/373949da-f5e1-46cc-a9e7-f16cee2dd355.jpg" />
+    <img src="../pillow_images/100-jpg/373949da-f5e1-46cc-a9e7-f16cee2dd355.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_75 control-group">
+    <img src="../pillow_images/mac_posters/cc2925c8-069a-4cdb-a288-9ddf6a491154.jpg" />
+    <img src="../pillow_images/75-jpg/cc2925c8-069a-4cdb-a288-9ddf6a491154.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_100 control-group">
+    <img src="../pillow_images/mac_posters/cc2925c8-069a-4cdb-a288-9ddf6a491154.jpg" />
+    <img src="../pillow_images/95-jpg/cc2925c8-069a-4cdb-a288-9ddf6a491154.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container 75_100 variant-group">
+    <img src="../pillow_images/75-jpg/cc2925c8-069a-4cdb-a288-9ddf6a491154.jpg" />
+    <img src="../pillow_images/95-jpg/cc2925c8-069a-4cdb-a288-9ddf6a491154.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_75 control-group">
+    <img src="../pillow_images/mac_posters/a8220124-d56b-46da-a372-cb7685d8497e.jpg" />
+    <img src="../pillow_images/75-jpg/a8220124-d56b-46da-a372-cb7685d8497e.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container control_100 control-group">
+    <img src="../pillow_images/mac_posters/a8220124-d56b-46da-a372-cb7685d8497e.jpg" />
+    <img src="../pillow_images/95-jpg/a8220124-d56b-46da-a372-cb7685d8497e.jpg" />
+  </div>
+  
+  <div class="container twentytwenty-container 75_100 variant-group">
+    <img src="../pillow_images/75-jpg/a8220124-d56b-46da-a372-cb7685d8497e.jpg" />
+    <img src="../pillow_images/95-jpg/a8220124-d56b-46da-a372-cb7685d8497e.jpg" />
+  </div>
+  
+
+
+  <script>
+    $(function () {
+      $(".twentytwenty-container").twentytwenty({
+        move_slider_on_hover: true,
+      });
+
+      $('.trigger').change(function () {
+        var name = $(this).attr('name');
+        if (this.checked) {
+          $('.' + name).removeClass('hide');
+        } else {
+          $('.' + name).addClass('hide');
+        }
+      });
+      $(".variant-group.trigger").prop("checked", true);
+      $('.control-group.container').addClass('hide');
+    });
+  </script>
+</body>
+</html>
