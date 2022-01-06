@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Compare</title>
+  <link rel="stylesheet" href="" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../assets/jquery.event.move.js" type="text/javascript"></script>
+  <!-- <script src="../assets/jquery.twentytwenty.js" type="text/javascript"></script> -->
+  <!-- https://github.com/zurb/twentytwenty -->
+  <link rel="stylesheet" href="../assets/twentytwenty.css" type="text/css" media="screen" />
+  <style>
+    .hide {
+      display: none;
+    }
+    .twentytwenty-container img {
+      width: 400px;
+      height: 574px;
+      float: left;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Control are resized from original images in JPG form, Others are resized from original images in WEBP, with different quality, 100 means lossless</p>
+
+  <div class="image-panel"></div>
+
+  <script>
+    $(function () {
+      // $(".twentytwenty-container").twentytwenty({
+      //   move_slider_on_hover: false,
+      // });
+      var images = [
+        '0c70faa3-bf63-4b0e-8ef2-87cb4f1e0275.jpg',
+        '373949da-f5e1-46cc-a9e7-f16cee2dd355.jpg',
+        '4afd31cc-3d0b-4535-a6ed-26e7a567a73e.jpg',
+        '576fbbdc-c89a-4797-ae09-1ef9049a01bb.jpg',
+        'a8220124-d56b-46da-a372-cb7685d8497e.jpg',
+        'cc2925c8-069a-4cdb-a288-9ddf6a491154.jpg',
+        'ddd4871f-322b-4cc2-b446-7e72937ceca0.jpg',
+        'f7be1bde-00e8-4518-9637-bcb0c00049a3.jpg',
+      ];
+
+      var $imagePanel = $('.image-panel');
+      images.forEach(function (image) {
+        var container = $('<div class="container twentytwenty-container control_75 control-group"> </div>');
+
+        var variantsFolder = [
+          '75-webp',
+          'online_posters',
+          '95-jpg',
+          'source_posters',
+        ];
+
+        variantsFolder.forEach(function (folder) {
+          var imagePath = '../pillow_images/' + folder + '/' + image;
+          var imageElement = $('<img src="' + imagePath + '" title="' + folder + '" />');
+          container.append(imageElement);
+        });
+
+        $imagePanel.append(container);
+      });
+
+      $('.trigger').change(function () {
+        var name = $(this).attr('name');
+        if (this.checked) {
+          $('.' + name).removeClass('hide');
+        } else {
+          $('.' + name).addClass('hide');
+        }
+      });
+      // $(".variant-group.trigger").prop("checked", true);
+      // $('.control-group.container').addClass('hide');
+    });
+  </script>
+</body>
+</html>
