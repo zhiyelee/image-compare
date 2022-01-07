@@ -45,14 +45,16 @@
 
         var variantsFolder = [
           '75-webp',
-          'online_posters',
-          '95-jpg',
-          'canvas_posters',
+          '75-jpg',
+          'avif',
           'source_posters',
         ];
 
         variantsFolder.forEach(function (folder) {
           var imagePath = '../pillow_images/' + folder + '/' + image;
+          if (folder === 'avif') {
+            imagePath = '../pillow_images/' + folder + '/' + image.replace('.jpg', '.avif');
+          }
           var imageElement = $('<img src="' + imagePath + '" title="' + folder + '" />');
           container.append(imageElement);
         });
